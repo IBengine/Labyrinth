@@ -177,7 +177,7 @@ void Parcours_simple_labyrinthe_informations_deplacement(int dimension_m_ligne_o
 	int coordonnee_sortie_ligne=0;int coordonnee_entree_ligne=0;int coordonnee_sortie_colonne=dimension_n_colonne_abscisse-1;
 	int coordonnee_entree_colonne=0;int coordonnee_robot_colonne;int coordonnee_robot_ligne;int deplacement_t_moins_1=est;
 	boolean affichage_rapport_w_fichier = TRUE;
-	//printf("billy\n");
+	/*printf("billy\n");*/
 	do {
 		coordonnee_sortie_ligne=coordonnee_sortie_ligne+1;
 	} while(labyrinthe[coordonnee_sortie_ligne][coordonnee_sortie_colonne]==-1);
@@ -199,10 +199,10 @@ void fonction_deplacement_robot_gauche_plus_affichage(int dimension_m_ligne_ordo
   */
 	int deplacement_a_effectuer;
 	FILE* fichier = NULL;
-  //printf("billy2\n");
+  /*printf("billy2\n");*/
 	fichier = fopen(cwd,"r+");
   fseek(fichier, 0, SEEK_END);
-  //printf("billy1_%d\n",SEEK_END);
+  /*printf("billy1_%d\n",SEEK_END);*/
 	if (fichier != NULL)
 	{
 		if (affichage_rapport_w_fichier == TRUE)
@@ -557,7 +557,7 @@ void ecriture_fichier_text_donnee_tableau_plus_labyrinthe(int tableau_donnees[3]
 		scanf("%d",&tableau_donnees[0]);
 		return 0;
 	}
-  //printf("billy0_%d\n",SEEK_END);
+  /*printf("billy0_%d\n",SEEK_END);*/
 	fclose(fichier);
 	return 0;
 }
@@ -585,7 +585,7 @@ void saisie_donnee_difficultees_parcours(int tableau_donnees[4])
 	}
 	while (niveau_difficulte_max>10||niveau_difficulte_max<1)
 	{
-		printf("Entrer le niveau de difficulte de 1 a 10\n");
+		printf("Entrer le niveau de difficultee maximum de 1 a 10\n");
 		scanf("%d",&niveau_difficulte_max);
 	}
 	tableau_donnees[0]=dimension_m_ligne_ordonnee;
